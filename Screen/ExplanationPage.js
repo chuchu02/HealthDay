@@ -16,8 +16,6 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Icon from 'react-native-vector-icons/AntDesign';
 import tw from 'twrnc';
 
-import {theme} from '../colors';
-
 const ExplanationPage = ({navigation}) => {
   const [waying, setWaying] = useState(true);
   const caution = () => setWaying(false);

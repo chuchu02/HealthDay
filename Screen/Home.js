@@ -7,9 +7,9 @@ import {
   TouchableOpacity,
   Alert,
   Image,
-  BackHandler,
   ImageResizeMode,
   SafeAreaView,
+  BackHandler,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/AntDesign';
 import tw from 'twrnc';
@@ -17,6 +17,19 @@ import tw from 'twrnc';
 import {theme} from '../colors';
 
 const Home = ({navigation}) => {
+  const exitApp = () => {
+    Alert.alert('잠깐!!', '어플을 종료하시겠습니까?', [
+      {
+        text: '취소',
+      },
+      {
+        text: '종료',
+        onPress: () => {
+          const exitApp = BackHandler.exitApp();
+        },
+      },
+    ]);
+  };
   return (
     <>
       <SafeAreaView style={styles.container}>
@@ -25,8 +38,8 @@ const Home = ({navigation}) => {
           style={styles.Mainimage}
         />
         <View style={styles.header}>
-          <TouchableOpacity>
-            <Icon name="closecircle" size={50} color="white" />
+          <TouchableOpacity onPress={() => exitApp()}>
+            <Icon name="closecircleo" size={50} color="white" />
           </TouchableOpacity>
         </View>
         <View style={styles.say}>
