@@ -1,39 +1,40 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
+import {useEffect, useState} from 'react';
+import * as React from 'react';
+import {} from 'react-native';
+import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import Home from './Screen/Home';
+import Exercise from './Screen/Exercise';
+import Chest from './Screen/Chest';
+import Back from './Screen/Back';
+import Abs from './Screen/Abs';
+import LowerBody from './Screen/LowerBody';
+import Shoulder from './Screen/Shoulder';
+import Arm from './Screen/Arm';
+import ExplanationPage from './Screen/ExplanationPage';
 
-import React from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
-
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
-import tw from 'twrnc';
+const Stack = createNativeStackNavigator();
 
 const App = () => {
   return (
-    <View>
-      <Text style={tw`text-3xl text-red-500`}>1111</Text>
-    </View>
+    <>
+      <NavigationContainer>
+        <Stack.Navigator
+          initialRouteName="Home"
+          screenOptions={{headerShown: false}}>
+          <Stack.Screen name="Home" component={Home} />
+          <Stack.Screen name="Exercise" component={Exercise} />
+          <Stack.Screen name="Chest" component={Chest} />
+          <Stack.Screen name="Back" component={Back} />
+          <Stack.Screen name="Abs" component={Abs} />
+          <Stack.Screen name="LowerBody" component={LowerBody} />
+          <Stack.Screen name="Shoulder" component={Shoulder} />
+          <Stack.Screen name="Arm" component={Arm} />
+          <Stack.Screen name="ExplanationPage" component={ExplanationPage} />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </>
   );
 };
-
-const styles = StyleSheet.create({});
 
 export default App;
