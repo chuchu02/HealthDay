@@ -17,7 +17,7 @@ import tw from 'twrnc';
 
 import {theme} from '../colors';
 
-const Exercise = ({navigation}) => {
+const ExMasterClass = ({navigation}) => {
   return (
     <>
       <SafeAreaView style={styles.container}>
@@ -25,7 +25,11 @@ const Exercise = ({navigation}) => {
           <TouchableOpacity onPress={() => navigation.pop()}>
             <Icon name="back" size={50} color="white" />
           </TouchableOpacity>
-          <Text style={tw`text-white text-3xl font-semibold`}>HealthDay</Text>
+          <View style={tw`flex-row`}>
+            <Icon name="star" size={50} color="white" />
+            <Icon name="star" size={50} color="white" />
+            <Icon name="star" size={50} color="white" />
+          </View>
           <TouchableOpacity onPress={() => navigation.popToTop()}>
             <Icon name="home" size={50} color="white" />
           </TouchableOpacity>
@@ -157,4 +161,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Exercise;
+export default ExMasterClass;

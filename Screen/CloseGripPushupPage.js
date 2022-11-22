@@ -16,7 +16,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Icon from 'react-native-vector-icons/AntDesign';
 import tw from 'twrnc';
 
-const ExplanationPage = ({navigation}) => {
+const CloseGripPushupPage = ({navigation}) => {
   const [waying, setWaying] = useState(true);
   const caution = () => setWaying(false);
   const way = () => setWaying(true);
@@ -32,13 +32,13 @@ const ExplanationPage = ({navigation}) => {
           </TouchableOpacity>
         </View>
         <View style={styles.ExnameBox}>
-          <Text style={styles.Exname}>가슴운동 {'>'} 푸쉬업</Text>
+          <Text style={styles.Exname}>가슴운동 {'>'} 클로즈그립 푸쉬업</Text>
         </View>
         <View style={styles.VideoBox}>
           <Image
             style={{width: '100%', height: '100%'}}
             source={{
-              uri: 'https://blog.kakaocdn.net/dn/cOoVu0/btqPC2gbBh6/78LDbAKRxVohMJfBxgGG10/img.gif',
+              uri: 'https://k.kakaocdn.net/dn/bIChOv/btqPC0vWdxt/L4vi0MK74mCj5Yd2JI7aK1/img.gif',
             }}
           />
         </View>
@@ -64,7 +64,7 @@ const ExplanationPage = ({navigation}) => {
         </View>
         <View style={{...styles.Submenu3, display: waying ? 'flex' : 'none'}}>
           <Text style={styles.SubmenuText2}>
-            1. 팔을 어깨너비보다 조금 넓게 벌려 바닥을 짚는다.
+            1. 손을 다이아몬드 모양으로 바닥을 짚는다.
           </Text>
           <Text style={styles.SubmenuText2}>
             2. 호흡을 들이마시면서 천천히 팔꿈치를 굽힌다.
@@ -74,7 +74,7 @@ const ExplanationPage = ({navigation}) => {
             자극에 집중한다.
           </Text>
           <Text style={styles.SubmenuText2}>
-            4. 호흡을 내쉬면서 시작 위치로 올라온다.
+            4. 호흡을 내쉬면서 가슴을 모아주는 느낌으로 시작 위치로 돌아온다.
           </Text>
         </View>
         <View style={{...styles.Submenu3, display: !waying ? 'flex' : 'none'}}>
@@ -146,10 +146,10 @@ const styles = StyleSheet.create({
   },
   SubmenuText2: {
     color: 'white',
-    fontSize: 18,
-    marginVertical: 5,
+    fontSize: 17,
+    marginVertical: 2,
     marginHorizontal: 10,
   },
 });
 
-export default ExplanationPage;
+export default CloseGripPushupPage;

@@ -43,29 +43,17 @@ const Home = ({navigation}) => {
           </TouchableOpacity>
         </View>
         <View style={styles.say}>
-          <Text
-            style={tw`text-white text-2xl font-serif absolute top-20 left-5 font-bold`}>
-            Work out!
-          </Text>
-          <Text
-            style={tw`text-white text-2xl font-serif absolute top-30 left-10 font-bold`}>
-            Eat well!
-          </Text>
-          <Text
-            style={tw`text-white text-2xl font-serif absolute top-40 left-15 font-bold`}>
-            Be patient!
-          </Text>
-          <Text
-            style={tw`text-white text-2xl font-serif absolute top-50 left-20 font-bold`}>
-            Your body will reward you.
-          </Text>
+          <Text style={styles.wiseSaying}>Work out!</Text>
+          <Text style={styles.wiseSaying}>Eat well!</Text>
+          <Text style={styles.wiseSaying}>Be patient!</Text>
+          <Text style={styles.wiseSaying}>Your body will reward you.</Text>
         </View>
         <View style={styles.MainMenu}>
           <TouchableOpacity
             activeOpacity={0.8}
             style={styles.HealthBox}
             onPress={() => {
-              navigation.navigate('Exercise');
+              navigation.navigate('ExBeginner');
             }}>
             <Text style={styles.level}>초급</Text>
             <Image
@@ -80,7 +68,7 @@ const Home = ({navigation}) => {
             activeOpacity={0.8}
             style={styles.HealthBox}
             onPress={() => {
-              navigation.navigate('Exercise');
+              navigation.navigate('ExMiddleClass');
             }}>
             <Text style={styles.level}>중급</Text>
             <Image
@@ -96,7 +84,7 @@ const Home = ({navigation}) => {
             activeOpacity={0.8}
             style={styles.HealthBox}
             onPress={() => {
-              navigation.navigate('Exercise');
+              navigation.navigate('ExMasterClass');
             }}>
             <Text style={styles.level}>고급</Text>
             <Image
@@ -121,7 +109,7 @@ const styles = StyleSheet.create({
     backgroundColor: theme.bg,
   },
   header: {
-    flex: 1,
+    flex: 0.1,
     justifyContent: 'flex-end',
     flexDirection: 'row',
     padding: 5,
@@ -129,10 +117,14 @@ const styles = StyleSheet.create({
     color: 'white',
   },
   say: {
-    position: 'absolute',
-    top: 175,
-    width: '100%',
-    height: '30%',
+    flex: 0.5,
+    alignItems: 'center',
+    justifyContent: 'flex-end',
+  },
+  wiseSaying: {
+    fontSize: 25,
+    fontWeight: '700',
+    color: 'white',
   },
   footer: {
     width: '100%',
@@ -153,7 +145,7 @@ const styles = StyleSheet.create({
     opacity: 0.3,
   },
   MainMenu: {
-    flex: 1,
+    flex: 0.7,
     alignContent: 'space-around',
     justifyContent: 'space-around',
     flexWrap: 'wrap',

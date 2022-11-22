@@ -35,7 +35,7 @@ const Chest = ({navigation}) => {
             activeOpacity={0.8}
             style={styles.HealthBox}
             onPress={() => {
-              navigation.navigate('ExplanationPage');
+              navigation.navigate('PushupPage');
             }}>
             <View style={styles.HealthNameBox}>
               <Text style={styles.HealthName}>푸쉬업</Text>
@@ -52,7 +52,7 @@ const Chest = ({navigation}) => {
             activeOpacity={0.8}
             style={styles.HealthBox}
             onPress={() => {
-              navigation.navigate('Chest');
+              navigation.navigate('InclinePushupPage');
             }}>
             <View style={styles.HealthNameBox}>
               <Text style={styles.HealthName}>인클라인 푸쉬업</Text>
@@ -69,7 +69,7 @@ const Chest = ({navigation}) => {
             activeOpacity={0.8}
             style={styles.HealthBox}
             onPress={() => {
-              navigation.navigate('Chest');
+              navigation.navigate('DeclinePushupPage');
             }}>
             <View style={styles.HealthNameBox}>
               <Text style={styles.HealthName}>디클라인 푸쉬업</Text>
@@ -86,7 +86,7 @@ const Chest = ({navigation}) => {
             activeOpacity={0.8}
             style={styles.HealthBox}
             onPress={() => {
-              navigation.navigate('Chest');
+              navigation.navigate('WidePushupPage');
             }}>
             <View style={styles.HealthNameBox}>
               <Text style={styles.HealthName}>와이드 푸쉬업</Text>
@@ -103,10 +103,10 @@ const Chest = ({navigation}) => {
             activeOpacity={0.8}
             style={styles.HealthBox}
             onPress={() => {
-              navigation.navigate('Chest');
+              navigation.navigate('CloseGripPushupPage');
             }}>
             <View style={styles.HealthNameBox}>
-              <Text style={styles.HealthName}>내로우 스탠스 푸쉬업</Text>
+              <Text style={styles.HealthName}>클로즈그립 푸쉬업</Text>
             </View>
             <Icon name="right" style={styles.RightArrow} />
             <Image
