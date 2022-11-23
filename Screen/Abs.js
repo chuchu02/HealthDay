@@ -25,78 +25,30 @@ const Abs = ({navigation}) => {
           <TouchableOpacity onPress={() => navigation.pop()}>
             <Icon name="back" size={50} color="white" />
           </TouchableOpacity>
+          <Text style={tw`text-white text-3xl font-semibold`}>HealthDay</Text>
           <TouchableOpacity onPress={() => navigation.popToTop()}>
             <Icon name="home" size={50} color="white" />
           </TouchableOpacity>
         </View>
         <View style={styles.MainMenu}>
           <TouchableOpacity
+            activeOpacity={0.8}
             style={styles.HealthBox}
             onPress={() => {
-              navigation.navigate('Chest');
+              navigation.navigate('Plank');
             }}>
-            <Text style={styles.HealthName}>가슴 운동</Text>
+            <View style={styles.HealthNameBox}>
+              <Text style={styles.HealthName}>플랭크</Text>
+            </View>
+            <Icon name="right" style={styles.RightArrow} />
             <Image
               style={styles.HealthImageBox}
               source={{
-                uri: 'https://ifh.cc/g/nPy47T.jpg',
-              }}
-            />
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={styles.HealthBox}
-            onPress={() => {
-              navigation.navigate('Back');
-            }}>
-            <Text style={styles.HealthName}>등 운동</Text>
-            <Image
-              style={styles.HealthImageBox}
-              source={{
-                uri: 'https://ifh.cc/g/7Ogx5q.jpg',
-              }}
-            />
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={styles.HealthBox}
-            onPress={() => {
-              navigation.navigate('LowerBody');
-            }}>
-            <Text style={styles.HealthName}>하체 운동</Text>
-            <Image
-              style={styles.HealthImageBox}
-              source={{
-                uri: 'https://ifh.cc/g/KCtwLO.jpg',
-              }}
-            />
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={styles.HealthBox}
-            onPress={() => {
-              navigation.navigate('Shoulder');
-            }}>
-            <Text style={styles.HealthName}>어깨 운동</Text>
-            <Image
-              style={styles.HealthImageBox}
-              source={{
-                uri: 'https://ifh.cc/g/FLmCap.jpg',
-              }}
-            />
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={styles.HealthBox}
-            onPress={() => {
-              navigation.navigate('Abs');
-            }}>
-            <Text style={styles.HealthName}>복근 운동</Text>
-            <Image
-              style={styles.HealthImageBox}
-              source={{
-                uri: 'https://ifh.cc/g/6A7Ysc.jpg',
+                uri: 'https://ifh.cc/g/2W2zZS.jpg',
               }}
             />
           </TouchableOpacity>
         </View>
-        <View style={styles.footer}></View>
       </SafeAreaView>
     </>
   );
@@ -129,24 +81,40 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',
   },
   HealthBox: {
-    alignItems: 'center',
-    width: '90%',
+    justifyContent: 'center',
+    width: '100%',
     height: '18%',
     marginBottom: 10,
+    backgroundColor: 'lightgray',
   },
   HealthImageBox: {
-    width: '100%',
+    width: '40%',
     height: '100%',
     resizeMode: 'cover',
-    borderRadius: 10,
   },
   HealthName: {
-    color: 'white',
-    fontSize: 30,
-    opacity: 0.8,
-    fontWeight: '600',
+    color: 'black',
+    fontSize: 20,
+    fontWeight: '300',
+    position: 'absolute',
+    left: 10,
+    zIndex: 1,
+  },
+  HealthNameBox: {
+    width: '50%',
+    height: '100%',
+    zIndex: 1,
+    position: 'absolute',
+    justifyContent: 'center',
+    top: 0,
+    left: 163,
+  },
+  RightArrow: {
     position: 'absolute',
     zIndex: 1,
+    fontSize: 30,
+    right: 10,
+    color: 'black',
   },
 });
 
