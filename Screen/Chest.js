@@ -30,23 +30,23 @@ const Chest = ({navigation}) => {
             <Icon name="home" size={50} color="white" />
           </TouchableOpacity>
         </View>
-        <View style={styles.MainMenu}>
+        <ScrollView contentContainerStyle={styles.MainMenu}>
           <TouchableOpacity
             activeOpacity={0.8}
             style={styles.HealthBox}
             onPress={() => {
               navigation.navigate('PushupPage');
             }}>
-            <View style={styles.HealthNameBox}>
-              <Text style={styles.HealthName}>푸쉬업</Text>
-            </View>
-            <Icon name="right" style={styles.RightArrow} />
             <Image
               style={styles.HealthImageBox}
               source={{
                 uri: 'https://ifh.cc/g/rWGKOV.jpg',
               }}
             />
+            <View style={styles.HealthNameBox}>
+              <Text style={styles.HealthName}>푸쉬업</Text>
+            </View>
+            <Icon name="right" style={styles.RightArrow} />
           </TouchableOpacity>
           <TouchableOpacity
             activeOpacity={0.8}
@@ -54,16 +54,16 @@ const Chest = ({navigation}) => {
             onPress={() => {
               navigation.navigate('InclinePushupPage');
             }}>
-            <View style={styles.HealthNameBox}>
-              <Text style={styles.HealthName}>인클라인 푸쉬업</Text>
-            </View>
-            <Icon name="right" style={styles.RightArrow} />
             <Image
               style={styles.HealthImageBox}
               source={{
                 uri: 'https://ifh.cc/g/9MyAjM.jpg',
               }}
             />
+            <View style={styles.HealthNameBox}>
+              <Text style={styles.HealthName}>인클라인 푸쉬업</Text>
+            </View>
+            <Icon name="right" style={styles.RightArrow} />
           </TouchableOpacity>
           <TouchableOpacity
             activeOpacity={0.8}
@@ -71,16 +71,16 @@ const Chest = ({navigation}) => {
             onPress={() => {
               navigation.navigate('DeclinePushupPage');
             }}>
-            <View style={styles.HealthNameBox}>
-              <Text style={styles.HealthName}>디클라인 푸쉬업</Text>
-            </View>
-            <Icon name="right" style={styles.RightArrow} />
             <Image
               style={styles.HealthImageBox}
               source={{
                 uri: 'https://ifh.cc/g/GYMxfY.jpg',
               }}
             />
+            <View style={styles.HealthNameBox}>
+              <Text style={styles.HealthName}>디클라인 푸쉬업</Text>
+            </View>
+            <Icon name="right" style={styles.RightArrow} />
           </TouchableOpacity>
           <TouchableOpacity
             activeOpacity={0.8}
@@ -88,16 +88,16 @@ const Chest = ({navigation}) => {
             onPress={() => {
               navigation.navigate('WidePushupPage');
             }}>
-            <View style={styles.HealthNameBox}>
-              <Text style={styles.HealthName}>와이드 푸쉬업</Text>
-            </View>
-            <Icon name="right" style={styles.RightArrow} />
             <Image
               style={styles.HealthImageBox}
               source={{
                 uri: 'https://ifh.cc/g/g9aWLd.png',
               }}
             />
+            <View style={styles.HealthNameBox}>
+              <Text style={styles.HealthName}>와이드 푸쉬업</Text>
+            </View>
+            <Icon name="right" style={styles.RightArrow} />
           </TouchableOpacity>
           <TouchableOpacity
             activeOpacity={0.8}
@@ -105,18 +105,18 @@ const Chest = ({navigation}) => {
             onPress={() => {
               navigation.navigate('CloseGripPushupPage');
             }}>
-            <View style={styles.HealthNameBox}>
-              <Text style={styles.HealthName}>클로즈그립 푸쉬업</Text>
-            </View>
-            <Icon name="right" style={styles.RightArrow} />
             <Image
               style={styles.HealthImageBox}
               source={{
                 uri: 'https://ifh.cc/g/ldZHPk.png',
               }}
             />
+            <View style={styles.HealthNameBox}>
+              <Text style={styles.HealthName}>클로즈그립 푸쉬업</Text>
+            </View>
+            <Icon name="right" style={styles.RightArrow} />
           </TouchableOpacity>
-        </View>
+        </ScrollView>
       </SafeAreaView>
     </>
   );
@@ -128,60 +128,41 @@ const styles = StyleSheet.create({
     backgroundColor: theme.bg,
   },
   header: {
-    flex: 1,
+    height: '10%',
     justifyContent: 'space-between',
     flexDirection: 'row',
     padding: 5,
     fontSize: 25,
     color: 'white',
   },
-  footer: {
-    width: '100%',
-    height: '7%',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  MainMenu: {
-    flex: 10,
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
-    flexWrap: 'wrap',
-  },
+  MainMenu: {},
   HealthBox: {
-    justifyContent: 'center',
-    width: '100%',
-    height: '18%',
-    marginBottom: 10,
+    height: 130,
+    flexDirection: 'row',
+    marginBottom: 20,
     backgroundColor: 'lightgray',
   },
   HealthImageBox: {
-    width: '40%',
-    height: '100%',
+    flex: 0.7,
     resizeMode: 'cover',
   },
   HealthName: {
     color: 'black',
     fontSize: 20,
-    fontWeight: '300',
-    position: 'absolute',
-    left: 10,
+    fontWeight: '600',
+    marginLeft: 10,
     zIndex: 1,
   },
   HealthNameBox: {
-    width: '50%',
-    height: '100%',
+    flex: 1,
     zIndex: 1,
-    position: 'absolute',
     justifyContent: 'center',
-    top: 0,
-    left: 163,
   },
   RightArrow: {
-    position: 'absolute',
+    flex: 0.15,
+    alignSelf: 'center',
     zIndex: 1,
     fontSize: 30,
-    right: 10,
     color: 'black',
   },
 });

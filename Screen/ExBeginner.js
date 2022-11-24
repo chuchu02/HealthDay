@@ -138,11 +138,6 @@ const styles = StyleSheet.create({
     fontSize: 25,
     color: 'white',
   },
-  footerText: {
-    fontSize: 30,
-    color: 'white',
-    padding: 5,
-  },
   HealthImageBox: {
     width: '100%',
     height: '100%',
