@@ -92,7 +92,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'lightgray',
   },
   HealthImageBox: {
-    flex: 0.7,
+    flex: 0.9,
     resizeMode: 'cover',
   },
   HealthName: {
